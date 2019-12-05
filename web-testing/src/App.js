@@ -1,6 +1,6 @@
 import React from 'react';
 import Display  from './components/display';
-
+import Dashborard  from './components/dashboard';
 import './App.css';
 
 class App extends React.Component {
@@ -12,7 +12,7 @@ class App extends React.Component {
   }
 
   plusStrike = (e) => {
-    e.prevemtDefault();
+    e.preventDefault();
       if(this.state.strike < 2) {
         this.setState({
           strike: this.state.strike + 1
@@ -26,7 +26,7 @@ class App extends React.Component {
     }
 
     plusBall = (e) => {
-      e.prevemtDefault();
+      e.preventDefault();
         if(this.state.ball < 3) {
           this.setState({
             ball: this.state.ball + 1
@@ -40,7 +40,7 @@ class App extends React.Component {
     }
     
     plusFoul = (e) => {
-      e.prevemtDefault();
+      e.preventDefault();
       if (this.state.strike < 2) {
         this.setState({
           strike: this.state.strike + 1
@@ -52,7 +52,7 @@ class App extends React.Component {
       }
     }
    plusHit = (e) => {
-     e.prevemtDefault();
+     e.preventDefault();
      this.setState({
        hit: this.state.hit +1,
        strike: 0,
@@ -71,8 +71,23 @@ class App extends React.Component {
            this.state.ball
          }
          />
+
+         <Dashborard plusStrike ={
+           this.plusStrike
+         }
+         plusBall ={
+           this.plusBall
+         }
+         plusFoul ={
+           this.plusFoul
+         }
+         plusHit ={
+           this.plusHit
+         }
+                
+         />
        </div>
-     )
+     );
        
      
    }
