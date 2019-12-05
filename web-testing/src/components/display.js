@@ -13,20 +13,14 @@ import React from 'react';
 
 
 class Display extends React.Component {
-    state = {
-        balls: 3,
-        strikes: 2,
-        hit: false,
-    }
-
-    render () {
-        <div>
-            <h1>Main display</h1>
-            <h2>Strikes</h2>
-            <h2>Balls</h2>
-
-        </div>
-    }
+   render() {
+       return (
+           <div>
+            <h1>strikes:{this.props.strikes}</h1>
+            <h1>balls:{this.props.balls}</h1>
+           </div>
+       )
+   }
 }
 
 export default Display;
