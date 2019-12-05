@@ -5,7 +5,7 @@ import './App.css';
 
 class App extends React.Component {
   state ={
-    strik: 0,
+    strike: 0,
     ball: 0,
     hit: 0,
     foul: 0,

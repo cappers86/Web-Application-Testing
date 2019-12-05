@@ -8,7 +8,7 @@
 // With two strikes a foul has no effect, count stays at 2 strikes.
 
 import React, { Component } from 'react';
-import Display from './display';
+
 
 class Dashboard extends React.Component {
     render() {

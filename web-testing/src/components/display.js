@@ -16,8 +16,10 @@ class Display extends React.Component {
    render() {
        return (
            <div>
-            <h1>strikes:{this.props.strikes}</h1>
-            <h1>balls:{this.props.balls}</h1>
+
+               <h1>Baseball</h1>
+            <h1 >strikes:{this.props.strikes}</h1>
+            <h1 data-testid="count">balls:{this.props.balls}</h1>
            </div>
        )
    }
